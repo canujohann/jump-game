@@ -94,7 +94,7 @@ backLight.castShadow = true;
 scene.add(backLight)
 
 const laneTypes = ['car', 'truck', 'forest'];
-const laneSpeeds = [2, 2.5, 3];
+const laneSpeeds = [1, 1.5, 2.5];
 const vechicleColors = [0xa52523, 0xbdb638, 0x78b14b];
 const threeHeights = [20,45,60];
 
@@ -330,7 +330,9 @@ function Grass() {
 
   const createSection = color => new THREE.Mesh(
     new THREE.BoxBufferGeometry( boardWidth*zoom, positionWidth*zoom, 3*zoom ), 
-    new THREE.MeshPhongMaterial( { color } )
+    new THREE.MeshPhongMaterial( { 
+      color,
+    } )
   );
 
   const middle = createSection(0xbaf455);
